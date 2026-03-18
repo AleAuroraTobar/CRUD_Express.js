@@ -1,6 +1,7 @@
 const express = require("express") // Import Express
 const fs = require("fs"); // Import FileSystem
 const cors = require("cors"); // Import CORS
+const path = require("path"); // Import Path module for handling file paths
 
 const app = express() // Creates an Express application instance
 
@@ -8,8 +9,16 @@ const app = express() // Creates an Express application instance
 app.use(express.json());  
 app.use(cors());
 
-// Start the server on port 3000 
 
+
+// ==================== HOME ROUTE ====================
+
+// Loads the frontend interface in the browser
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// Start the server on port 3000 
 app.listen(3000, () => {
     console.log("Servidor levantado en el puerto 3000"); // Console log to indicate the server is running
 });
