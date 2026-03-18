@@ -19,7 +19,6 @@ DESAFIO-2-EXPRESS-MI-REPERTORIO
 ├── repertorio.json   # JSON file used as a simple database
 ├── package.json      # Project dependencies
 └── node_modules
-```
 
 ## ⚙️ Installation and Setup
 
